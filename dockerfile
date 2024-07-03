@@ -11,7 +11,7 @@ COPY go.mod go.sum ./
 COPY . .
 
 # Build the Go app
-RUN go build -o hook .
+RUN go build -o main .
 
 # Expose port 8080 to the outside world
 EXPOSE 8080
