@@ -50,7 +50,7 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func discordMessenger(message DiscordMessege) error {
-	webhookUrl := os.Getenv("s2dweebhook")
+	webhookUrl := os.Getenv("s2dwebhook")
 	jsonMessage, err := json.Marshal(message)
 	if err != nil {
 		fmt.Printf("Error marshalling JSON: %v\n", err)
