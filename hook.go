@@ -8,8 +8,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-
-	"github.com/pborman/uuid"
 )
 
 // WebhookPayload represents the structure of your webhook payload
@@ -81,7 +79,4 @@ func main() {
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
-
-	uuidWithHyphen := uuid.NewRandom()
-	fmt.Println(uuidWithHyphen) //test for github actions.
 }
